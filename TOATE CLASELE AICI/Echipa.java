@@ -48,7 +48,7 @@ abstract class Echipa {
 	}
 	
 	public void setNumarMaximMembri(int nr, Membru mem) {
-		if(this.getLider().equals(mem))
+		if(this.getLider().equals(mem)) {
 			this.numarMaximMembri = nr;
 			if(nr == 0) {
 				membri.clear();
@@ -57,12 +57,13 @@ abstract class Echipa {
 			else {
 				for(int i=membri.size()-1;i>=nr;i--) {
 					membri.remove(i);
+					this.lider = membri.get(0);
 				}
-				this.lider = membri.get(0);
 			}
+		}
 		else {
 			System.out.println("Doar liderul are voie sa modifice numarul!");
-		}
+		}	
 	}
 	
 	public void setNume(String nume, Membru mem) {
