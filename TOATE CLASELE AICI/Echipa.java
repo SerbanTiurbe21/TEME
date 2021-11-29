@@ -57,8 +57,8 @@ abstract class Echipa {
 			else {
 				for(int i=membri.size()-1;i>=nr;i--) {
 					membri.remove(i);
-					this.lider = membri.get(0);
 				}
+				this.lider = membri.get(0);
 			}
 		}
 		else {
