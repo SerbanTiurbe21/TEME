@@ -50,12 +50,18 @@ abstract class Echipa {
 	public void setNumarMaximMembri(int nr, Membru mem) {
 		if(this.getLider().equals(mem))
 			this.numarMaximMembri = nr;
+			if(nr == 0) {
+				membri.clear();
+				this.lider = null;
+			}
+			else {
+				for(int i=membri.size()-1;i>=nr;i--) {
+					membri.remove(i);
+				}
+				this.lider = membri.get(0);
+			}
 		else {
 			System.out.println("Doar liderul are voie sa modifice numarul!");
-		}
-		if(nr == 0) {
-			membri.clear();
-			this.lider = null;
 		}
 	}
 	
