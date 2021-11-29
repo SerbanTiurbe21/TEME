@@ -75,7 +75,7 @@ abstract class Echipa {
 	
 	public abstract double getCost();
 	public String toString() {
-		String tempp = "";
+		String tempp = "Numele: " + this.nume + "\nMembri:";
 		if(this.getLider() == null) {
 			for(int i=0;i<membri.size();i++) {
 				tempp += membri.get(i).toString() + " ";
